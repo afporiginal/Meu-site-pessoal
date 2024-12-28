@@ -9,12 +9,12 @@ body {
     font-family: 'Helvetica', 'Arial', sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
     line-height: 1.6;
 }
 
 body.dark-mode {
-    background-color: #1e1e1e;
+    background-color: #2f2f2f;
     color: #f4f4f4;
 }
 
@@ -22,22 +22,24 @@ body.dark-mode {
 .header {
     text-align: center;
     padding: 4rem 1rem;
+    background-color: #1a73e8; /* Azul vibrante para o fundo */
+    color: #fff;
+    border-bottom: 5px solid #e63946; /* Linha de destaque em laranja */
 }
 
 .intro-container h1 {
     font-size: 3rem;
     font-weight: bold;
-    color: #333;
     margin-bottom: 0.5rem;
 }
 
 .intro-container .highlight {
-    color: #e63946;
+    color: #e63946; /* Laranja para destacar */
 }
 
 .subtext {
     font-size: 1.2rem;
-    color: #555;
+    color: #f0f0f0;
 }
 
 /* Botão de alternância de tema */
@@ -52,6 +54,7 @@ body.dark-mode {
     background: none;
     border: none;
     cursor: pointer;
+    color: #f4f4f4;
 }
 
 /* Animação de fade-in */
@@ -70,6 +73,8 @@ body.dark-mode {
 .skills {
     text-align: center;
     padding: 2rem 1rem;
+    background-color: #fff;
+    border-top: 5px solid #e63946;
 }
 
 .skills-container {
@@ -86,6 +91,7 @@ body.dark-mode {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: all 0.3s ease;
+    border-left: 10px solid #1a73e8; /* Azul para destacar */
 }
 
 .card img {
@@ -101,13 +107,15 @@ body.dark-mode {
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    border-left-color: #e63946; /* Laranja vibrante no hover */
 }
 
 /* Links */
 .links {
     text-align: center;
     padding: 2rem 1rem;
+    background-color: #fff;
 }
 
 .links-container {
@@ -128,6 +136,7 @@ body.dark-mode {
     text-decoration: none;
     color: #333;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #66cc66; /* Verde para os links */
 }
 
 .link-card img {
@@ -142,17 +151,20 @@ body.dark-mode {
 .link-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-color: #e63946; /* Laranja no hover */
 }
 
-/* Tema dark */
+/* Tema escuro */
 body.dark-mode .card,
 body.dark-mode .link-card {
     background-color: #333;
     color: #f4f4f4;
+    border: 2px solid #e63946;
 }
 
 body.dark-mode .link-card:hover,
 body.dark-mode .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
+    border-color: #66cc66;
 }
