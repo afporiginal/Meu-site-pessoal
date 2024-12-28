@@ -11,3 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Alternar modo escuro/claro
+const themeToggleButton = document.getElementById("theme-toggle");
+const body = document.body
