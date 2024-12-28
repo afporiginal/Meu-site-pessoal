@@ -1,184 +1,147 @@
-/* Reset básico */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
 }
 
-/* Corpo */
+/* Corpo do site */
 body {
-    background-color: #fafafa;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
     color: #333;
-    font-size: 1rem;
-    line-height: 1.6;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Container Principal */
+/* Tema escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
 .container {
-    width: 100%;
-    max-width: 1200px;
+    width: 80%;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
-/* Cabeçalho */
+/* Header */
 .header {
-    background-color: #2e3b4e;
-    color: white;
     text-align: center;
-    padding: 40px 0;
-    animation: fadeIn 1.5s ease-out;
-    border-radius: 15px;
-    margin-bottom: 50px;
-}
-
-.header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 50px 0;
 }
 
 .header-title {
-    font-size: 3rem;
-    font-family: 'Orbitron', sans-serif;
-    margin-bottom: 0;
+    font-size: 48px;
+    font-weight: 600;
+    color: #660000;
+    transition: color 0.3s;
 }
 
-.highlight-text {
-    color: #FF8C00;
-    text-transform: uppercase;
-    font-weight: bold;
+.header-title .highlight-text {
+    color: #ff4500;
 }
 
-.header-subtitle {
-    font-size: 1.2rem;
-    margin-top: 10px;
-}
-
-/* Efeito de arredondamento no título */
-.header-title {
-    border-bottom: 3px solid #FF8C00;
-    padding-bottom: 20px;
-}
-
-/* Botão de Modo Escuro */
 .theme-toggle-btn {
-    background-color: #f7f7f7;
-    color: #2e3b4e;
+    background: none;
     border: none;
-    padding: 12px 18px;
+    font-size: 24px;
     cursor: pointer;
-    font-size: 1.6rem;
-    border-radius: 50%;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: transform 0.3s;
 }
 
 .theme-toggle-btn:hover {
-    background-color: #FF8C00;
-    color: #fff;
+    transform: scale(1.1);
 }
 
-/* Animações */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-/* Seções */
-section {
-    padding: 50px 0;
+/* Seção Intro */
+.intro {
+    padding: 60px 0;
     text-align: center;
 }
 
-h2 {
-    font-size: 2.5rem;
-    color: #2e3b4e;
-    margin-bottom: 30px;
-    font-family: 'Orbitron', sans-serif;
+.intro-text {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #333;
 }
 
-/* Cartões */
+/* Seção de Paixões */
+.passions {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #660000;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 .cards {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     gap: 20px;
-    margin-top: 40px;
-    animation: fadeIn 2s ease-out;
 }
 
 .card {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #f5f5f5;
     border-radius: 15px;
-    padding: 20px;
-    width: 220px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    padding: 30px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .card-title {
-    color: #2e3b4e;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #660000;
+    margin-bottom: 15px;
 }
 
-/* Habilidades */
-.skills-list {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 40px;
-}
-
-.skill {
-    text-align: center;
-}
-
-.skill img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
-}
-
-.skill:hover img {
-    transform: scale(1.2);
-}
-
-.skill p {
-    font-size: 1rem;
-    color: #333;
-    margin-top: 10px;
-}
-
-/* Links e Botões */
+/* Links */
 .highlight-link {
-    color: #FF8C00;
+    color: #660000;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
 .highlight-link:hover {
-    color: #FF4500;
+    color: #ff4500;
 }
 
-/* Rodapé */
+/* Footer */
 .footer {
-    background-color: #2e3b4e;
-    color: white;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 50px;
+    padding: 30px 0;
+    background-color: #660000;
+    color: #fff;
+    margin-top: 60px;
 }
 
-.footer p {
-    font-size: 1rem;
+/* Animações de carregamento */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header, .intro, .passions, .footer {
+    animation: fadeIn 1s ease-out;
 }
