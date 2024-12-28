@@ -8,7 +8,7 @@
 
 /* Corpo */
 body {
-    background-color: #f4f4f9;
+    background-color: #fafafa;
     color: #333;
     font-size: 1rem;
     line-height: 1.6;
@@ -25,39 +25,59 @@ body {
 
 /* Cabeçalho */
 .header {
-    background-color: #660000;
+    background-color: #2e3b4e;
     color: white;
     text-align: center;
-    padding: 60px 0;
+    padding: 40px 0;
     animation: fadeIn 1.5s ease-out;
-    border-radius: 10px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header-title {
     font-size: 3rem;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 0;
+}
+
+.highlight-text {
+    color: #FF8C00;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .header-subtitle {
     font-size: 1.2rem;
-    margin-bottom: 0;
+    margin-top: 10px;
 }
 
+/* Efeito de arredondamento no título */
+.header-title {
+    border-bottom: 3px solid #FF8C00;
+    padding-bottom: 20px;
+}
+
+/* Botão de Modo Escuro */
 .theme-toggle-btn {
-    background-color: #fff;
-    color: #660000;
+    background-color: #f7f7f7;
+    color: #2e3b4e;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 18px;
     cursor: pointer;
-    font-size: 1rem;
-    border-radius: 5px;
-    margin-top: 20px;
+    font-size: 1.6rem;
+    border-radius: 50%;
     transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .theme-toggle-btn:hover {
-    background-color: #660000;
+    background-color: #FF8C00;
     color: #fff;
 }
 
@@ -75,14 +95,9 @@ section {
 
 h2 {
     font-size: 2.5rem;
-    color: #660000;
+    color: #2e3b4e;
     margin-bottom: 30px;
-}
-
-p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto;
+    font-family: 'Orbitron', sans-serif;
 }
 
 /* Cartões */
@@ -97,9 +112,9 @@ p {
 .card {
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 10px; /* Canto arredondado */
+    border-radius: 15px;
     padding: 20px;
-    width: 200px;
+    width: 220px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
 }
@@ -110,7 +125,7 @@ p {
 }
 
 .card-title {
-    color: #660000;
+    color: #2e3b4e;
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
@@ -146,64 +161,24 @@ p {
 
 /* Links e Botões */
 .highlight-link {
-    color: #3d8bff;
+    color: #FF8C00;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .highlight-link:hover {
-    color: #660000;
-    text-decoration: underline;
+    color: #FF4500;
 }
 
 /* Rodapé */
 .footer {
-    background-color: #660000;
+    background-color: #2e3b4e;
     color: white;
-    padding: 20px 0;
     text-align: center;
-    animation: fadeIn 2s ease-out;
-    border-radius: 10px;
+    padding: 20px 0;
+    margin-top: 50px;
 }
 
-.footer a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
-
-/* Modo Escuro */
-body.dark-mode {
-    background-color: #121212;
-    color: #f4f4f9;
-}
-
-.header.dark-mode {
-    background-color: #333;
-}
-
-.theme-toggle-btn.dark-mode {
-    background-color: #333;
-    color: #fff;
-}
-
-.footer.dark-mode {
-    background-color: #333;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .skills-list {
-        flex-direction: column;
-        align-items: center;
-    }
+.footer p {
+    font-size: 1rem;
 }
