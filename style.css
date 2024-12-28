@@ -1,112 +1,97 @@
+/* Reset de estilo básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
-    font-family: 'Roboto', sans-serif;
-    background-color: #1a1a1a;
-    color: white;
-    overflow: hidden;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1f1f1f;
+  color: #fff;
+  line-height: 1.6;
 }
 
-#space {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: url('https://source.unsplash.com/1600x900/?space') no-repeat center center/cover;
-    animation: spaceMovement 60s linear infinite;
+h1, h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 20px;
 }
 
-.intro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    z-index: 10;
-    text-align: center;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.intro .content {
-    max-width: 500px;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 30px;
-    border-radius: 10px;
-    opacity: 0;
-    animation: fadeIn 2s forwards;
+/* Estilo para a seção de introdução */
+#intro {
+  background-color: #222;
+  text-align: center;
+  padding: 50px;
+  margin-bottom: 40px;
+  border-radius: 10px;
 }
 
-#theme-toggle {
-    background-color: #ff4500;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: all 0.3s ease;
+#intro h1 {
+  font-size: 2.5rem;
+  color: #e74c3c; /* Vermelho escuro */
 }
 
-#theme-toggle:hover {
-    transform: scale(1.1);
+#intro p {
+  font-size: 1.2rem;
+  color: #ccc;
 }
 
-.section {
-    padding: 100px 50px;
-    text-align: center;
+/* Seção Sobre Mim */
+#sobre {
+  padding: 50px;
+  text-align: center;
 }
 
-h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #e50914;
+#sobre h2 {
+  font-size: 2rem;
+  color: #e74c3c;
+  margin-bottom: 30px;
 }
 
-.card-container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-top: 30px;
+.about-info {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
 }
 
-.card {
-    background-color: #2d2d2d;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+.info-item {
+  background-color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 300px;
+  text-align: left;
 }
 
-.card:hover {
-    transform: scale(1.1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+.icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 15px;
 }
 
-@keyframes spaceMovement {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+.info-item p, .info-item ul {
+  font-size: 1rem;
 }
 
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+.highlight {
+  font-weight: bold;
+  color: #e74c3c; /* Vermelho escuro */
 }
 
-.dark-mode {
-    background-color: #222222;
-    color: white;
+ul {
+  list-style: none;
 }
 
-.dark-mode h2 {
-    color: #ff4500;
+ul li {
+  margin: 5px 0;
 }
 
-.dark-mode #theme-toggle {
-    background-color: #ff6347;
+@media (max-width: 768px) {
+  .about-info {
+    flex-direction: column;
+  }
 }
-
