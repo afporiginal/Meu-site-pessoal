@@ -1,97 +1,137 @@
-/* Reset de estilo básico */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #1f1f1f;
-  color: #fff;
-  line-height: 1.6;
+    background-color: #1f1f1f;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
 }
 
-h1, h2 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-bottom: 20px;
+header {
+    background-color: #121212;
+    padding: 20px 0;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Estilo para a seção de introdução */
+.brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+button {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
 #intro {
-  background-color: #222;
-  text-align: center;
-  padding: 50px;
-  margin-bottom: 40px;
-  border-radius: 10px;
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #222;
+    margin-top: 60px;
+    animation: fadeIn 1s ease;
 }
 
 #intro h1 {
-  font-size: 2.5rem;
-  color: #e74c3c; /* Vermelho escuro */
+    font-size: 3rem;
+    color: #ff4757;
+    margin-bottom: 20px;
 }
 
 #intro p {
-  font-size: 1.2rem;
-  color: #ccc;
-}
-
-/* Seção Sobre Mim */
-#sobre {
-  padding: 50px;
-  text-align: center;
-}
-
-#sobre h2 {
-  font-size: 2rem;
-  color: #e74c3c;
-  margin-bottom: 30px;
-}
-
-.about-info {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-}
-
-.info-item {
-  background-color: #333;
-  border-radius: 10px;
-  padding: 20px;
-  max-width: 300px;
-  text-align: left;
-}
-
-.icon {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 15px;
-}
-
-.info-item p, .info-item ul {
-  font-size: 1rem;
-}
-
-.highlight {
-  font-weight: bold;
-  color: #e74c3c; /* Vermelho escuro */
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
 ul {
-  list-style: none;
+    list-style-type: none;
+    margin-top: 20px;
 }
 
 ul li {
-  margin: 5px 0;
+    font-size: 1.2rem;
 }
 
-@media (max-width: 768px) {
-  .about-info {
-    flex-direction: column;
-  }
+#skills {
+    background-color: #333;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #444;
+    color: white;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    background-color: #121212;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #888;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #ddd;
+}
+
+.dark-mode button {
+    color: #ff4757;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
