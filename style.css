@@ -1,190 +1,209 @@
-/* Reset e estilos gerais */
+/* Estilos gerais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: 'Helvetica', 'Arial', sans-serif;
-    background-color: #111; /* Preto para fundo */
+    background-color: #1a1a1a;
     color: #fff;
+    font-size: 16px;
     line-height: 1.6;
-    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #111;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+nav {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo h1 {
+    font-size: 24px;
+    color: #fff;
+}
+
+.theme-toggle-btn {
+    background: none;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+}
+
+/* Seção de Introdução */
+#intro {
+    background: linear-gradient(135deg, #111, #222);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#intro .content h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#intro .content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#intro .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#intro .social-links .btn {
+    background-color: #e50914;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
     transition: all 0.3s ease;
 }
 
-body.dark-mode {
-    background-color: #1a1a1a;
-    color: #fff;
+#intro .social-links .btn:hover {
+    background-color: #f40612;
 }
 
-/* Header */
-.header {
+/* Cartões de Habilidades */
+.skills {
+    padding: 50px 20px;
+    background-color: #121212;
     text-align: center;
-    padding: 5rem 1rem;
-    background-color: #9b111e; /* Vermelho escuro */
+}
+
+.skills h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.skills .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.skills .card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.skills .card h3 {
+    font-size: 1.5em;
     color: #fff;
-    position: relative;
 }
 
-.intro-container h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+.skills .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
-.intro-container .highlight {
+/* Ferramentas e Interesses */
+.tools, .favorites {
+    padding: 50px 20px;
+    background-color: #121212;
+    text-align: center;
+}
+
+.tools h2, .favorites h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.tools .tools-cards, .favorites .favorites-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.tools .card, .favorites .card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.tools .card h3, .favorites .card h3 {
+    font-size: 1.5em;
     color: #fff;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
 }
 
-.subtext {
-    font-size: 1.2rem;
-    color: #f0f0f0;
-    opacity: 0.8;
+.tools .card:hover, .favorites .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* Botão de alternância de tema */
-.theme-toggle {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+/* Imagens dos ícones */
+.tool-icon, .interest-icon {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
-#theme-toggle {
-    font-size: 1.8rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #f4f4f4;
-}
-
-/* Animação de fade-in */
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1.5s forwards;
-}
-
+/* Animações */
 @keyframes fadeIn {
-    to {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* Seções */
-.skills, .links, .interests {
-    padding: 3rem 1rem;
-    text-align: center;
+/* Modo Escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+body.dark-mode header {
     background-color: #222;
-    margin-top: 2rem;
-    border-radius: 10px;
 }
 
-.skills h2, .links h2, .interests h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #e63946; /* Laranja para destaque */
+body.dark-mode .theme-toggle-btn {
+    border-color: #ccc;
 }
 
-.skills-container, .links-container, .interests-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-}
-
-.card, .link-card, .interest-card {
+body.dark-mode .card {
     background-color: #333;
-    border-radius: 10px;
-    padding: 1.5rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: all 0.3s ease;
-    border: 2px solid #9b111e; /* Vermelho escuro para bordas */
 }
 
-.card img, .link-card img, .interest-card img {
-    width: 60px;
-    margin-bottom: 1rem;
-}
-
-.card p, .link-card span, .interest-card p {
-    font-size: 1.2rem;
-    color: #fff;
-    font-weight: bold;
-}
-
-.card:hover, .link-card:hover, .interest-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* Efeitos de hover para links */
-.link-card {
-    width: 150px;
-    text-decoration: none;
-    color: inherit;
-    border: 2px solid transparent;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.link-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    border-color: #f57c00; /* Laranja vibrante */
-}
-
-/* Links específicos */
-.roblox {
-    border-color: #ff6f00;
-}
-
-.roblox:hover {
-    border-color: #f57c00;
-}
-
-/* Interesses */
-.interests-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-}
-
-.interest-card {
-    background-color: #333;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.interest-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-.interest-card img {
-    width: 50px;
-    margin-bottom: 1rem;
-}
-
-.interest-card p {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #fff;
-}
-
-/* Layout Responsivo */
+/* Estilo Responsivo */
 @media (max-width: 768px) {
-    .skills-container, .links-container, .interests-container {
-        flex-direction: column;
+    #intro .content h2 {
+        font-size: 2.5em;
+    }
+
+    .tools h2, .favorites h2 {
+        font-size: 1.8em;
     }
 }
