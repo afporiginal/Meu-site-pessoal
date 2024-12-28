@@ -1,53 +1,44 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Meu site pessoal - AFPL, desenvolvedor apaixonado por tecnologia e inovação.">
-    <title>AFPL - Meu Site Pessoal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>AFPL - Meu Site</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 </head>
-
 <body>
-    <header class="header">
+    <header class="site-header">
         <div class="container">
-            <h1 class="header-title">👋 Olá, eu sou <span class="highlight-text">AFPL</span></h1>
-            <button id="theme-toggle" class="theme-toggle-btn">🌙</button>
+            <h1 class="main-title">Olá, eu sou <span>AFPL</span></h1>
+            <p class="sub-title">Desenvolvedor apaixonado por tecnologia, Roblox Studio e automação!</p>
+        </div>
+        <div class="button-container">
+            <button id="toggle-dark-mode" aria-label="Alternar modo escuro">🌙</button>
         </div>
     </header>
 
-    <section class="intro" id="intro">
-        <div class="container">
-            <h2 class="section-title">Sobre Mim</h2>
-            <p class="intro-text">Tenho 17 anos, sou apaixonado por tecnologia, programação e design. Sou desenvolvedor em várias linguagens como Python, Lua e JavaScript, e faço parte da equipe administrativa no <strong><a href="https://discord.gg/Jz2qrC2mwY" target="_blank" class="highlight-link">Clube do AFM</a></strong>.</p>
-        </div>
-    </section>
+    <main>
+        <section class="about">
+            <h2>Sobre Mim</h2>
+            <p>Tenho 17 anos e sou desenvolvedor brasileiro. Amo programar e criar experiências únicas.</p>
+            <ul>
+                <li>🎮 Trabalho com <strong>Roblox Studio</strong>, <strong>VSCode</strong>, e <strong>GitHub</strong>.</li>
+                <li>📜 Experiência em <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>Python</strong>, <strong>Lua</strong>, e <strong>C#</strong>.</li>
+            </ul>
+        </section>
 
-    <section class="passions" id="passions">
-        <div class="container">
-            <h2 class="section-title">Minhas Paixões</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3 class="card-title">Locke & Key</h3>
-                    <p>Série favorita com mistérios e magia que me fascinam.</p>
-                </div>
-                <div class="card">
-                    <h3 class="card-title">Harry Potter</h3>
-                    <p>Livros que moldaram minha visão sobre mundos mágicos e criativos.</p>
-                </div>
+        <section class="links">
+            <h2>Links Úteis</h2>
+            <div class="button-group">
+                <a href="https://github.com/afporiginal" class="button" target="_blank">Meu GitHub</a>
+                <a href="https://discord.gg/Jz2qrC2mwY" class="button" target="_blank">Clube do AFM</a>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>Desenvolvido com ❤️ por <strong>AFPL</strong></p>
-        </div>
+    <footer class="site-footer">
+        <p>© 2024 AFPL - Todos os direitos reservados.</p>
     </footer>
-
 </body>
-
 </html>
