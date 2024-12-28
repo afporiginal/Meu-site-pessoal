@@ -1,54 +1,111 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AFPL Original</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="https://github.githubassets.com/favicons/favicon-dark.svg">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site pessoal de AFPL, um jovem desenvolvedor apaixonado por tecnologia, jogos e criatividade.">
+    <title>AFPL - Site Pessoal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #660000;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        header h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2rem;
+        }
+        section {
+            padding: 50px;
+            margin: 0 10%;
+        }
+        .section-title {
+            color: #660000;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .content {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+        .content p {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .tech-stack {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+        .tech-stack img {
+            width: 40px;
+            height: 40px;
+        }
+        footer {
+            background-color: #660000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="intro">
-      <h1>👋 Olá, Mundo! Eu sou <span>AFPL</span></h1>
-      <p>Código. Crie. Inove. Repita. 🚀</p>
-    </div>
-  </header>
-  
-  <main>
-    <section class="about">
-      <h2>🌟 Quem Sou Eu?</h2>
-      <p>
-        Desenvolvedor apaixonado por automações, criador de jogos no Roblox 🎮 e bots avançados para Discord 🤖.
-      </p>
-      <p>
-        Sempre em busca de soluções criativas para problemas reais e experiências imersivas para jogadores.
-      </p>
+    <header>
+        <h1>👋 Olá, eu sou AFPL</h1>
+        <p>Desenvolvedor | Criador | Sonhador | Apaixonado por tecnologia e inovação</p>
+    </header>
+
+    <section>
+        <h2 class="section-title">Quem sou eu?</h2>
+        <div class="content">
+            <p>Sou um jovem desenvolvedor de 17 anos, apaixonado por criar soluções inovadoras, explorar novas tecnologias e me aprofundar em mundos de fantasia. Meu objetivo é sempre buscar a combinação entre criatividade e lógica, criando experiências digitais únicas.</p>
+        </div>
     </section>
 
-    <section class="skills">
-      <h2>⚙️ Arsenal Tecnológico</h2>
-      <div class="grid">
-        <div class="item"><span>🐍</span> Python</div>
-        <div class="item"><span>🌙</span> Lua</div>
-        <div class="item"><span>🖥️</span> JavaScript</div>
-        <div class="item"><span>⚙️</span> Node.js</div>
-        <div class="item"><span>🔗</span> Git</div>
-        <div class="item"><span>🎮</span> Roblox</div>
-      </div>
+    <section>
+        <h2 class="section-title">Minhas Paixões</h2>
+        <div class="content">
+            <p>Adoro mistérios e fantasias, como as que encontramos em *Locke & Key* e *Harry Potter*. Meu interesse pela programação vem dessa necessidade de criar mundos e experiências imersivas, seja para jogos, bots ou aplicativos.</p>
+        </div>
     </section>
 
-    <section class="connect">
-      <h2>📬 Vamos Conectar</h2>
-      <p>Discord: <strong>afploriginal</strong></p>
-      <p>Email: <a href="mailto:afploriginal.luz07@hotmail.com">afploriginal.luz07@hotmail.com</a></p>
+    <section>
+        <h2 class="section-title">Tecnologias que uso</h2>
+        <div class="tech-stack">
+            <img src="https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white&style=for-the-badge" alt="Python">
+            <img src="https://img.shields.io/badge/-Lua-2C2D72?logo=lua&logoColor=white&style=for-the-badge" alt="Lua">
+            <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=for-the-badge" alt="JavaScript">
+            <img src="https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white&style=for-the-badge" alt="Git">
+        </div>
     </section>
-  </main>
-  
-  <footer>
-    <p>&copy; 2024 AFPL Original. Todos os direitos reservados.</p>
-  </footer>
+
+    <section>
+        <h2 class="section-title">Meus Livros e Séries Favoritas</h2>
+        <div class="content">
+            <p>Além de programar, sou um grande fã de histórias incríveis, como *Harry Potter*, que me inspira com seus mundos mágicos e aventuras emocionantes. Também sou fã de *Locke & Key*, uma série cheia de mistério e fantasia.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>🔗 <a href="https://github.com/afporiginal" style="color: white; text-decoration: none;">GitHub</a> | 📩 <a href="mailto:afploriginal.luz07@hotmail.com" style="color: white; text-decoration: none;">Email</a> | 💬 <a href="https://discord.gg/Jz2qrC2mwY" style="color: white; text-decoration: none;">Clube do AFM</a></p>
+    </footer>
 </body>
 </html>
