@@ -12,6 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Alternar modo escuro/claro
-const themeToggleButton = document.getElementById("theme-toggle");
-const body = document.body
+
+// Alterna entre modo claro e escuro
+const themeToggleBtn = document.getElementById('theme-toggle');
+themeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    themeToggleBtn.textContent = document.body.classList.contains('dark-mode') ? '🌞' : '🌙';
+});
