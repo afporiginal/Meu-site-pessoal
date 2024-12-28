@@ -1,43 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre Mim - AFPL</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sobre Mim</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Seção de Introdução -->
-  <section id="intro" class="intro">
-    <h1>Olá, sou AFPL</h1>
-    <p>Bem-vindo ao meu site pessoal! Aqui você vai conhecer um pouco mais sobre mim.</p>
-  </section>
+    <header>
+        <div class="navbar">
+            <div class="brand">Sobre Mim</div>
+            <button id="theme-toggle">🌙</button>
+        </div>
+    </header>
 
-  <!-- Seção Sobre Mim -->
-  <section id="sobre" class="sobre">
-    <h2>Sobre Mim</h2>
-    <div class="about-info">
-      <div class="info-item">
-        <img src="images/locke-and-key.png" alt="Locke & Key" class="icon">
-        <p>Idade: <span class="highlight">17 anos</span></p>
-        <p>Série favorita: <span class="highlight">Locke & Key</span></p>
-        <p>Personagem favorita: <span class="highlight">Kinsey Locke</span></p>
-      </div>
-      <div class="info-item">
-        <img src="images/skills-icon.png" alt="Skills" class="icon">
-        <p>Habilidades:</p>
-        <ul>
-          <li><span class="highlight">C#</span></li>
-          <li><span class="highlight">JavaScript</span></li>
-          <li><span class="highlight">Python</span></li>
-          <li><span class="highlight">Lua</span></li>
-          <li><span class="highlight">HTML/CSS</span></li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    <main>
+        <section id="intro">
+            <div class="content">
+                <h1>Olá, Eu sou <span>AFPL</span>!</h1>
+                <p>Tenho 17 anos e sou apaixonado por desenvolvimento e design!</p>
+                <p>Série favorita: <strong>Locke & Key</strong></p>
+                <p>Personagem favorita: <strong>Kinsey Locke</strong></p>
+                <p>Minhas habilidades incluem:</p>
+                <ul>
+                    <li>C#</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Lua</li>
+                    <li>HTML/CSS</li>
+                </ul>
+            </div>
+        </section>
 
-  <!-- Script para animações e interatividade -->
-  <script src="script.js"></script>
+        <section id="skills">
+            <h2>Minhas Habilidades</h2>
+            <div class="cards">
+                <div id="card1" class="card">C#</div>
+                <div id="card2" class="card">JavaScript</div>
+                <div id="card3" class="card">Python</div>
+                <div id="card4" class="card">Lua</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 AFPL - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
