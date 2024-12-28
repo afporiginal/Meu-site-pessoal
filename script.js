@@ -1,5 +1,5 @@
 // Seletores
-const themeToggleBtn = document.getElementById('theme-toggle'); 
+const themeToggleBtn = document.getElementById('theme-toggle');
 const body = document.body;
 const introSection = document.getElementById('intro');
 
@@ -9,7 +9,7 @@ themeToggleBtn.addEventListener('click', () => {
     themeToggleBtn.textContent = body.classList.contains('dark-mode') ? '🌞' : '🌙';
 });
 
-// Animação de entrada
+// Animação de fade-in
 window.addEventListener('load', () => {
     if (introSection) {
         introSection.classList.add('fade-in');
