@@ -1,78 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AFPL | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Meu portfólio profissional com projetos e interesses.">
+    <title>AFPL - Portfólio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header class="header">
-        <div class="theme-toggle">
-            <button id="theme-toggle">🌙</button>
-        </div>
-        <div class="intro-container">
-            <h1 id="intro" class="fade-in">Olá, eu sou <span class="highlight">AFPL</span></h1>
-            <p class="subtext">Desenvolvedor apaixonado com uma jornada mágica e criativa!</p>
-        </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>AFPL</h1>
+            </div>
+            <button id="theme-toggle" class="theme-toggle-btn">🌙</button>
+        </nav>
     </header>
 
-    <main>
-        <section class="skills">
-            <h2>Habilidades</h2>
-            <div class="skills-container">
-                <div class="card">
-                    <img src="https://img.icons8.com/color/96/html-5--v1.png" alt="HTML">
-                    <p>HTML</p>
-                </div>
-                <div class="card">
-                    <img src="https://img.icons8.com/color/96/css3.png" alt="CSS">
-                    <p>CSS</p>
-                </div>
-                <div class="card">
-                    <img src="https://img.icons8.com/color/96/javascript.png" alt="JavaScript">
-                    <p>JavaScript</p>
-                </div>
-                <div class="card">
-                    <img src="https://img.icons8.com/color/96/python--v1.png" alt="Python">
-                    <p>Python</p>
-                </div>
+    <section id="intro" class="intro">
+        <div class="content">
+            <h2>Olá, eu sou o AFPL</h2>
+            <p>Desenvolvedor apaixonado por Roblox Studio, VS Code, GitHub e tecnologias como HTML, CSS, JavaScript, C# e Python.</p>
+            <div class="social-links">
+                <a href="https://github.com/afporiginal" target="_blank" class="btn">GitHub</a>
+                <a href="https://discord.gg/Jz2qrC2mwY" target="_blank" class="btn">Clube do AFM</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="links">
-            <h2>Me encontre aqui</h2>
-            <div class="links-container">
-                <a href="https://github.com/afporiginal" target="_blank" class="link-card">
-                    <img src="https://img.icons8.com/ios-filled/50/github.png" alt="GitHub">
-                    <span>GitHub</span>
-                </a>
-                <a href="https://discord.gg/Jz2qrC2mwY" target="_blank" class="link-card">
-                    <img src="https://img.icons8.com/ios-filled/50/discord-logo.png" alt="Discord">
-                    <span>Clube do AFM</span>
-                </a>
-                <a href="https://www.roblox.com/" target="_blank" class="link-card roblox">
-                    <img src="https://img.icons8.com/ios-filled/50/roblox.png" alt="Roblox">
-                    <span>Roblox Studio</span>
-                </a>
+    <section id="skills" class="skills">
+        <h2>Minhas Habilidades</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>HTML & CSS</h3>
             </div>
-        </section>
+            <div class="card">
+                <h3>JavaScript</h3>
+            </div>
+            <div class="card">
+                <h3>Python</h3>
+            </div>
+            <div class="card">
+                <h3>C#</h3>
+            </div>
+            <div class="card">
+                <h3>Lua</h3>
+            </div>
+        </div>
+    </section>
 
-        <section class="interests">
-            <h2>Meus Interesses</h2>
-            <div class="interests-container">
-                <div class="interest-card locke-key">
-                    <img src="https://img.icons8.com/ios-filled/50/key.png" alt="Chave">
-                    <p>Locke & Key</p>
-                </div>
-                <div class="interest-card harry-potter">
-                    <img src="https://img.icons8.com/ios-filled/50/wand.png" alt="Varinha mágica">
-                    <p>Harry Potter</p>
-                </div>
+    <section id="tools" class="tools">
+        <h2>Ferramentas que Uso</h2>
+        <div class="tools-cards">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Roblox_logo_2017.svg" alt="Roblox Studio" class="tool-icon">
+                <h3>Roblox Studio</h3>
             </div>
-        </section>
-    </main>
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Visual_Studio_Code_1.35_icon.svg" alt="VS Code" class="tool-icon">
+                <h3>Visual Studio Code</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="favorites" class="favorites">
+        <h2>Meus Interesses</h2>
+        <div class="favorites-cards">
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Locke_%26_Key_logo.svg" alt="Locke & Key" class="interest-icon">
+                <h3>Locke & Key</h3>
+            </div>
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Harry_Potter_Logo.svg" alt="Harry Potter" class="interest-icon">
+                <h3>Harry Potter</h3>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AFPL. Todos os direitos reservados.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
