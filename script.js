@@ -1,6 +1,7 @@
 // Seletores para o botão de alternância de tema e o corpo do documento
 const themeToggleBtn = document.getElementById('theme-toggle'); // Botão para alternar entre temas
 const body = document.body; // Corpo do documento para alterar classes de tema
+const introSection = document.getElementById('intro'); // Seção de introdução para animações
 
 // Função para alternar entre os modos claro e escuro
 function toggleTheme() {
@@ -23,7 +24,7 @@ window.addEventListener('load', () => {
     introContent.classList.add('fadeIn');
 });
 
-// Função para animar os cards de habilidades, ferramentas e interesses
+// Função para animar os cards de hobbies, preferências e ferramentas
 const cards = document.querySelectorAll('.card');
 
 cards.forEach(card => {
@@ -53,7 +54,7 @@ sectionHeaders.forEach(header => {
 
 // Detalhes de animação ao rolar a página
 const animateOnScroll = () => {
-    const sections = document.querySelectorAll('.skills, .tools, .favorites');
+    const sections = document.querySelectorAll('.about, .skills, .interests');
 
     sections.forEach(section => {
         const rect = section.getBoundingClientRect();
@@ -66,26 +67,19 @@ const animateOnScroll = () => {
 
 window.addEventListener('scroll', animateOnScroll);
 
-// Configuração para animação das seções ao rolar a página
-document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.skills, .tools, .favorites').forEach(section => {
-        section.classList.add('initial-fade');
-    });
-});
-
 // Função para alternar o estilo da página dependendo do tamanho da tela (Responsividade)
 const updateResponsiveStyles = () => {
     const width = window.innerWidth;
 
     if (width < 768) {
         // Modifica o layout para telas pequenas
-        document.querySelectorAll('.skills .cards, .tools .tools-cards, .favorites .favorites-cards').forEach(grid => {
+        document.querySelectorAll('.about .content, .skills .content, .interests .content').forEach(grid => {
             grid.style.gridTemplateColumns = 'repeat(auto-fit, minmax(200px, 1fr))';
         });
     } else {
         // Reverte as modificações de layout
-        document.querySelectorAll('.skills .cards, .tools .tools-cards, .favorites .favorites-cards').forEach(grid => {
-            grid.style.gridTemplateColumns = 'repeat(4, 1fr)';
+        document.querySelectorAll('.about .content, .skills .content, .interests .content').forEach(grid => {
+            grid.style.gridTemplateColumns = 'repeat(3, 1fr)';
         });
     }
 };
@@ -94,37 +88,8 @@ window.addEventListener('resize', updateResponsiveStyles);
 updateResponsiveStyles();
 
 // Efeito de fade-in ao carregar as seções
-const fadeInUpAnimation = document.styleSheets[0].insertRule(`
-    @keyframes fadeInUp {
-        0% {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-`, 0);
-
-// Aplicando a animação fadeInUp nas seções
-const applySectionAnimations = () => {
-    document.querySelectorAll('.skills, .tools, .favorites').forEach(section => {
-        section.classList.add('fadeInUp');
-    });
-};
-
-window.addEventListener('scroll', applySectionAnimations);
-
-// Lógica para o botão de alternância de tema
-themeToggleBtn.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    themeToggleBtn.textContent = body.classList.contains('dark-mode') ? '🌞' : '🌙';
-});
-
-// Função para adicionar animações de fade nas seções
 const fadeInSections = () => {
-    const sections = document.querySelectorAll('.skills, .tools, .favorites');
+    const sections = document.querySelectorAll('.about, .skills, .interests');
     
     sections.forEach(section => {
         const rect = section.getBoundingClientRect();
@@ -134,12 +99,37 @@ const fadeInSections = () => {
     });
 };
 
-// Evento de scroll para a animação das seções
 window.addEventListener('scroll', fadeInSections);
 
-// Configuração de início para animação
+// Função de animação na introdução
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.skills, .tools, .favorites').forEach(section => {
+    document.querySelectorAll('.about, .skills, .interests').forEach(section => {
         section.classList.add('fadeIn');
     });
 });
+
+// Lógica de animação para cada card de interesse
+const animateCard = (card) => {
+    card.addEventListener('mouseenter', () => {
+        card.style.transform = 'scale(1.1)';
+        card.style.transition = 'all 0.3s ease';
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'scale(1)';
+    });
+};
+
+document.querySelectorAll('.interest-card').forEach(animateCard);
+
+// Função para abrir links do GitHub e Discord (Com ícones)
+const openGitHub = () => {
+    window.open("https://github.com/afporiginal", "_blank");
+};
+
+const openDiscord = () => {
+    window.open("https://discord.gg/Jz2qrC2mwY", "_blank");
+};
+
+document.getElementById('github-btn').addEventListener('click', openGitHub);
+document.getElementById('discord-btn').addEventListener('click', openDiscord);
