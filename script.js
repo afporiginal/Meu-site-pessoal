@@ -1,31 +1,24 @@
-// Variáveis para o tema e animação de transição
-const themeToggleBtn = document.getElementById('theme-toggle'); // Botão para alternar entre modos
-const body = document.body; // Corpo do documento para alterar as classes de tema
-const introSection = document.getElementById('intro'); // Seção de introdução para animações de entrada
+// Seletores para tema e introdução
+const themeToggleBtn = document.getElementById('theme-toggle'); // Botão para alternar entre temas
+const body = document.body; // Corpo do documento para alterar classes de tema
+const introSection = document.getElementById('intro'); // Seção de introdução para animações
 
-// Função para alternar entre o modo claro e escuro
+// Função para alternar entre os modos claro e escuro
 function toggleTheme() {
     body.classList.toggle('dark-mode');
+    
     // Troca o ícone do botão conforme o tema
-    if (body.classList.contains('dark-mode')) {
-        themeToggleBtn.textContent = '🌞'; // Sol, para indicar que é o modo claro
-    } else {
-        themeToggleBtn.textContent = '🌙'; // Lua, para indicar que é o modo escuro
-    }
+    themeToggleBtn.textContent = body.classList.contains('dark-mode') ? '🌞' : '🌙';
 }
 
 // Função para animação de introdução
 function animateIntro() {
-    introSection.classList.add('animated'); // Adiciona uma classe que ativa animação de fade-in
+    if (introSection) {
+        introSection.classList.add('animated'); // Adiciona uma classe que ativa a animação
+    }
 }
 
-// Adicionando evento de clique no botão de tema
-themeToggleBtn.addEventListener('click', toggleTheme);
-
-// Chamando a animação da seção de introdução após o carregamento
-window.addEventListener('load', animateIntro);
-
-// Função para aplicar animação a outros elementos
+// Função para aplicar efeito de hover nas cartas
 function applyHoverEffect(card) {
     card.addEventListener('mouseover', () => {
         card.style.transform = 'scale(1.05)';
@@ -38,5 +31,13 @@ function applyHoverEffect(card) {
     });
 }
 
-// Aplica efeito de hover nas cartas
+// Evento de clique no botão de alternância de tema
+if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', toggleTheme);
+}
+
+// Chamando a animação da seção de introdução após o carregamento
+window.addEventListener('load', animateIntro);
+
+// Aplica efeito de hover nas cartas, se existirem
 document.querySelectorAll('.card').forEach(applyHoverEffect);
