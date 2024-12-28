@@ -7,39 +7,45 @@
 
 body {
     font-family: 'Helvetica', 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    background-color: #111; /* Preto para fundo */
+    color: #fff;
     line-height: 1.6;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
 }
 
 body.dark-mode {
-    background-color: #2f2f2f;
-    color: #f4f4f4;
+    background-color: #1a1a1a;
+    color: #fff;
 }
 
 /* Header */
 .header {
     text-align: center;
-    padding: 4rem 1rem;
-    background-color: #1a73e8; /* Azul vibrante para o fundo */
+    padding: 5rem 1rem;
+    background-color: #9b111e; /* Vermelho escuro */
     color: #fff;
-    border-bottom: 5px solid #e63946; /* Linha de destaque em laranja */
+    position: relative;
 }
 
 .intro-container h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
 
 .intro-container .highlight {
-    color: #e63946; /* Laranja para destacar */
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 .subtext {
     font-size: 1.2rem;
     color: #f0f0f0;
+    opacity: 0.8;
 }
 
 /* Botão de alternância de tema */
@@ -50,7 +56,7 @@ body.dark-mode {
 }
 
 #theme-toggle {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     background: none;
     border: none;
     cursor: pointer;
@@ -69,102 +75,116 @@ body.dark-mode {
     }
 }
 
-/* Habilidades */
-.skills {
+/* Seções */
+.skills, .links, .interests {
+    padding: 3rem 1rem;
     text-align: center;
-    padding: 2rem 1rem;
-    background-color: #fff;
-    border-top: 5px solid #e63946;
-}
-
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1.5rem;
+    background-color: #222;
     margin-top: 2rem;
+    border-radius: 10px;
 }
 
-.card {
-    background-color: #fff;
+.skills h2, .links h2, .interests h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #e63946; /* Laranja para destaque */
+}
+
+.skills-container, .links-container, .interests-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.card, .link-card, .interest-card {
+    background-color: #333;
     border-radius: 10px;
     padding: 1.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: all 0.3s ease;
-    border-left: 10px solid #1a73e8; /* Azul para destacar */
+    border: 2px solid #9b111e; /* Vermelho escuro para bordas */
 }
 
-.card img {
+.card img, .link-card img, .interest-card img {
     width: 60px;
     margin-bottom: 1rem;
 }
 
-.card p {
-    font-size: 1rem;
+.card p, .link-card span, .interest-card p {
+    font-size: 1.2rem;
+    color: #fff;
     font-weight: bold;
-    color: #333;
 }
 
-.card:hover {
+.card:hover, .link-card:hover, .interest-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-    border-left-color: #e63946; /* Laranja vibrante no hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Links */
-.links {
-    text-align: center;
-    padding: 2rem 1rem;
-    background-color: #fff;
-}
-
-.links-container {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 2rem;
-}
-
+/* Efeitos de hover para links */
 .link-card {
-    background-color: #fff;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    padding: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 150px;
     text-decoration: none;
-    color: #333;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid #66cc66; /* Verde para os links */
-}
-
-.link-card img {
-    width: 30px;
-}
-
-.link-card span {
-    font-size: 1rem;
-    font-weight: bold;
+    color: inherit;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .link-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    border-color: #e63946; /* Laranja no hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-color: #f57c00; /* Laranja vibrante */
 }
 
-/* Tema escuro */
-body.dark-mode .card,
-body.dark-mode .link-card {
+/* Links específicos */
+.roblox {
+    border-color: #ff6f00;
+}
+
+.roblox:hover {
+    border-color: #f57c00;
+}
+
+/* Interesses */
+.interests-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.interest-card {
     background-color: #333;
-    color: #f4f4f4;
-    border: 2px solid #e63946;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
-body.dark-mode .link-card:hover,
-body.dark-mode .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
-    border-color: #66cc66;
+.interest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.interest-card img {
+    width: 50px;
+    margin-bottom: 1rem;
+}
+
+.interest-card p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Layout Responsivo */
+@media (max-width: 768px) {
+    .skills-container, .links-container, .interests-container {
+        flex-direction: column;
+    }
 }
