@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Animações ou interatividade podem ser adicionadas aqui
-    // Exemplo: adicionar um efeito suave ao rolar a página
+    // Animações para seções aparecerem quando estiverem visíveis
     const sections = document.querySelectorAll('section');
     
     window.addEventListener('scroll', () => {
