@@ -1,44 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AFPL - Meu Site</title>
+    <title>AFPL | Portfólio</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <h1 class="main-title">Olá, eu sou <span>AFPL</span></h1>
-            <p class="sub-title">Desenvolvedor apaixonado por tecnologia, Roblox Studio e automação!</p>
-        </div>
-        <div class="button-container">
-            <button id="toggle-dark-mode" aria-label="Alternar modo escuro">🌙</button>
-        </div>
+    <div class="theme-toggle" id="theme-toggle">🌙</div>
+
+    <header>
+        <h1 class="intro-text">Olá, eu sou <span class="highlight">AFPL</span></h1>
+        <p>Bem-vindo ao meu portfólio interativo!</p>
     </header>
 
     <main>
-        <section class="about">
+        <section id="about">
             <h2>Sobre Mim</h2>
-            <p>Tenho 17 anos e sou desenvolvedor brasileiro. Amo programar e criar experiências únicas.</p>
-            <ul>
-                <li>🎮 Trabalho com <strong>Roblox Studio</strong>, <strong>VSCode</strong>, e <strong>GitHub</strong>.</li>
-                <li>📜 Experiência em <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>Python</strong>, <strong>Lua</strong>, e <strong>C#</strong>.</li>
-            </ul>
+            <p>Tenho 17 anos, apaixonado por tecnologia e programação. Trabalho com:</p>
+            <div class="icons">
+                <img src="icons/html.png" alt="HTML" title="HTML">
+                <img src="icons/css.png" alt="CSS" title="CSS">
+                <img src="icons/csharp.png" alt="C#" title="C#">
+                <img src="icons/javascript.png" alt="JavaScript" title="JavaScript">
+                <img src="icons/lua.png" alt="Lua" title="Lua">
+                <img src="icons/python.png" alt="Python" title="Python">
+                <img src="icons/roblox.png" alt="Roblox Studio" title="Roblox Studio">
+                <img src="icons/vscode.png" alt="VSCode" title="VSCode">
+                <img src="icons/github.png" alt="GitHub" title="GitHub">
+            </div>
         </section>
 
-        <section class="links">
-            <h2>Links Úteis</h2>
-            <div class="button-group">
-                <a href="https://github.com/afporiginal" class="button" target="_blank">Meu GitHub</a>
-                <a href="https://discord.gg/Jz2qrC2mwY" class="button" target="_blank">Clube do AFM</a>
+        <section id="links">
+            <h2>Conexões</h2>
+            <div class="links">
+                <a href="https://github.com/afporiginal" target="_blank" class="link-button">🌐 Meu GitHub</a>
+                <a href="https://discord.gg/Jz2qrC2mwY" target="_blank" class="link-button">💬 Clube do AFM</a>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <p>© 2024 AFPL - Todos os direitos reservados.</p>
+    <footer>
+        <p>&copy; 2024 AFPL. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
