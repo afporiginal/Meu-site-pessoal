@@ -93,6 +93,7 @@ p {
     width: 200px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    background-color: #fff;
 }
 
 .card:hover {
@@ -136,6 +137,18 @@ p {
     font-size: 1rem;
     color: #333;
     margin-top: 10px;
+}
+
+/* Links e Botões */
+.highlight-link {
+    color: #3d8bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.highlight-link:hover {
+    color: #660000;
+    text-decoration: underline;
 }
 
 /* Rodapé */
