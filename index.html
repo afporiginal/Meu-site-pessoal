@@ -3,47 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AFPL | Portfólio</title>
+    <title>AFPL | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="theme-toggle" id="theme-toggle">🌙</div>
-
     <header>
-        <h1 class="intro-text">Olá, eu sou <span class="highlight">AFPL</span></h1>
-        <p>Bem-vindo ao meu portfólio interativo!</p>
+        <div class="theme-toggle">
+            <button id="theme-toggle" title="Alternar tema">🌙</button>
+        </div>
+        <div class="intro-container">
+            <h1 id="intro" class="fade-in">Olá, eu sou <span class="highlight">AFPL</span></h1>
+            <p class="subtext">Desenvolvedor apaixonado e curioso com 17 anos de experiência na vida!</p>
+        </div>
     </header>
-
     <main>
-        <section id="about">
-            <h2>Sobre Mim</h2>
-            <p>Tenho 17 anos, apaixonado por tecnologia e programação. Trabalho com:</p>
-            <div class="icons">
-                <img src="icons/html.png" alt="HTML" title="HTML">
-                <img src="icons/css.png" alt="CSS" title="CSS">
-                <img src="icons/csharp.png" alt="C#" title="C#">
-                <img src="icons/javascript.png" alt="JavaScript" title="JavaScript">
-                <img src="icons/lua.png" alt="Lua" title="Lua">
-                <img src="icons/python.png" alt="Python" title="Python">
-                <img src="icons/roblox.png" alt="Roblox Studio" title="Roblox Studio">
-                <img src="icons/vscode.png" alt="VSCode" title="VSCode">
-                <img src="icons/github.png" alt="GitHub" title="GitHub">
+        <section class="skills">
+            <h2>Habilidades</h2>
+            <div class="skills-container">
+                <div class="card">
+                    <img src="https://img.icons8.com/color/96/html-5--v1.png" alt="HTML">
+                    <p>HTML</p>
+                </div>
+                <div class="card">
+                    <img src="https://img.icons8.com/color/96/css3.png" alt="CSS">
+                    <p>CSS</p>
+                </div>
+                <div class="card">
+                    <img src="https://img.icons8.com/color/96/javascript.png" alt="JavaScript">
+                    <p>JavaScript</p>
+                </div>
+                <div class="card">
+                    <img src="https://img.icons8.com/color/96/python--v1.png" alt="Python">
+                    <p>Python</p>
+                </div>
+                <div class="card">
+                    <img src="https://img.icons8.com/color/96/lua-language.png" alt="Lua">
+                    <p>Lua</p>
+                </div>
             </div>
         </section>
-
-        <section id="links">
-            <h2>Conexões</h2>
-            <div class="links">
-                <a href="https://github.com/afporiginal" target="_blank" class="link-button">🌐 Meu GitHub</a>
-                <a href="https://discord.gg/Jz2qrC2mwY" target="_blank" class="link-button">💬 Clube do AFM</a>
+        <section class="links">
+            <h2>Me encontre aqui</h2>
+            <div class="links-container">
+                <a href="https://github.com/afporiginal" target="_blank" class="link-card">
+                    <img src="https://img.icons8.com/ios-filled/50/github.png" alt="GitHub">
+                    <span>Meu GitHub</span>
+                </a>
+                <a href="https://discord.gg/Jz2qrC2mwY" target="_blank" class="link-card">
+                    <img src="https://img.icons8.com/ios-filled/50/discord-logo.png" alt="Discord">
+                    <span>Clube do AFM</span>
+                </a>
             </div>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2024 AFPL. Todos os direitos reservados.</p>
-    </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
