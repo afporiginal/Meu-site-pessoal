@@ -1,40 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Universo Pessoal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Mim - AFPL</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="space">
-        <div id="intro" class="intro">
-            <div class="content">
-                <h1>Bem-vindo ao Infinito</h1>
-                <p>Onde cada linha de código reflete as estrelas do cosmos. Cada clique é uma viagem ao desconhecido.</p>
-                <button id="theme-toggle">🌙</button>
-            </div>
-        </div>
-        <div class="section about">
-            <h2>Sobre Mim</h2>
-            <p>Eu sou uma entusiasta do universo digital, criadora, exploradora e amante de experiências transcendentais.</p>
-        </div>
-        <div class="section skills">
-            <h2>Habilidades</h2>
-            <p>Domínio da criação de mundos digitais, desenvolvimento e interação com realidades além dos limites da imaginação.</p>
-        </div>
-        <div class="section interests">
-            <h2>Interesses</h2>
-            <div class="card-container">
-                <div class="card" id="card1">Locke & Key</div>
-                <div class="card" id="card2">Harry Potter</div>
-                <div class="card" id="card3">Roblox Studio</div>
-                <div class="card" id="card4">Visual Studio Code</div>
-            </div>
-        </div>
+  <!-- Seção de Introdução -->
+  <section id="intro" class="intro">
+    <h1>Olá, sou AFPL</h1>
+    <p>Bem-vindo ao meu site pessoal! Aqui você vai conhecer um pouco mais sobre mim.</p>
+  </section>
+
+  <!-- Seção Sobre Mim -->
+  <section id="sobre" class="sobre">
+    <h2>Sobre Mim</h2>
+    <div class="about-info">
+      <div class="info-item">
+        <img src="images/locke-and-key.png" alt="Locke & Key" class="icon">
+        <p>Idade: <span class="highlight">17 anos</span></p>
+        <p>Série favorita: <span class="highlight">Locke & Key</span></p>
+        <p>Personagem favorita: <span class="highlight">Kinsey Locke</span></p>
+      </div>
+      <div class="info-item">
+        <img src="images/skills-icon.png" alt="Skills" class="icon">
+        <p>Habilidades:</p>
+        <ul>
+          <li><span class="highlight">C#</span></li>
+          <li><span class="highlight">JavaScript</span></li>
+          <li><span class="highlight">Python</span></li>
+          <li><span class="highlight">Lua</span></li>
+          <li><span class="highlight">HTML/CSS</span></li>
+        </ul>
+      </div>
     </div>
-    <script src="script.js"></script>
+  </section>
+
+  <!-- Script para animações e interatividade -->
+  <script src="script.js"></script>
 </body>
 </html>
