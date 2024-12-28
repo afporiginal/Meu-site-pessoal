@@ -1,209 +1,112 @@
-/* Estilos gerais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
-body {
+body, html {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
     background-color: #1a1a1a;
-    color: #fff;
-    font-size: 16px;
-    line-height: 1.6;
+    color: white;
+    overflow: hidden;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Cabeçalho */
-header {
-    background-color: #111;
-    padding: 10px 20px;
-    position: fixed;
+#space {
+    position: relative;
     width: 100%;
-    top: 0;
+    height: 100%;
+    background: url('https://source.unsplash.com/1600x900/?space') no-repeat center center/cover;
+    animation: spaceMovement 60s linear infinite;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    width: 100%;
     z-index: 10;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav .logo h1 {
-    font-size: 24px;
-    color: #fff;
-}
-
-.theme-toggle-btn {
-    background: none;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 18px;
-    color: #fff;
-}
-
-/* Seção de Introdução */
-#intro {
-    background: linear-gradient(135deg, #111, #222);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    animation: fadeIn 2s ease-in-out;
 }
 
-#intro .content h2 {
-    font-size: 3em;
-    margin-bottom: 20px;
+.intro .content {
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
 }
 
-#intro .content p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-}
-
-#intro .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-#intro .social-links .btn {
-    background-color: #e50914;
-    color: #fff;
+#theme-toggle {
+    background-color: #ff4500;
+    color: white;
+    border: none;
     padding: 10px 20px;
     border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
     transition: all 0.3s ease;
 }
 
-#intro .social-links .btn:hover {
-    background-color: #f40612;
+#theme-toggle:hover {
+    transform: scale(1.1);
 }
 
-/* Cartões de Habilidades */
-.skills {
-    padding: 50px 20px;
-    background-color: #121212;
+.section {
+    padding: 100px 50px;
     text-align: center;
 }
 
-.skills h2 {
-    margin-bottom: 30px;
-    font-size: 2em;
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #e50914;
 }
 
-.skills .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+.card-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 30px;
 }
 
-.skills .card {
-    background-color: #333;
+.card {
+    background-color: #2d2d2d;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.skills .card h3 {
-    font-size: 1.5em;
-    color: #fff;
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-.skills .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+@keyframes spaceMovement {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
 }
 
-/* Ferramentas e Interesses */
-.tools, .favorites {
-    padding: 50px 20px;
-    background-color: #121212;
-    text-align: center;
-}
-
-.tools h2, .favorites h2 {
-    margin-bottom: 30px;
-    font-size: 2em;
-}
-
-.tools .tools-cards, .favorites .favorites-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.tools .card, .favorites .card {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
-}
-
-.tools .card h3, .favorites .card h3 {
-    font-size: 1.5em;
-    color: #fff;
-}
-
-.tools .card:hover, .favorites .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-}
-
-/* Imagens dos ícones */
-.tool-icon, .interest-icon {
-    width: 60px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-/* Animações */
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
-/* Modo Escuro */
-body.dark-mode {
-    background-color: #121212;
-    color: #fff;
+.dark-mode {
+    background-color: #222222;
+    color: white;
 }
 
-body.dark-mode header {
-    background-color: #222;
+.dark-mode h2 {
+    color: #ff4500;
 }
 
-body.dark-mode .theme-toggle-btn {
-    border-color: #ccc;
+.dark-mode #theme-toggle {
+    background-color: #ff6347;
 }
 
-body.dark-mode .card {
-    background-color: #333;
-}
-
-/* Estilo Responsivo */
-@media (max-width: 768px) {
-    #intro .content h2 {
-        font-size: 2.5em;
-    }
-
-    .tools h2, .favorites h2 {
-        font-size: 1.8em;
-    }
-}
