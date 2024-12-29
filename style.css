@@ -1,72 +1,125 @@
-/* Estilo amigável e descontraído */
-* {
+/* style.css */
+
+/* Configurações Gerais */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f0f8ff;
+    background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    padding: 20px;
-    text-align: center;
+    transition: opacity 1s ease;
 }
 
+/* Header */
 header {
-    background-color: #87cefa;
-    color: white;
-    padding: 30px 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    background: #660000;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
+    margin: 0;
     font-size: 2.5rem;
-    margin-bottom: 10px;
 }
 
-header p {
-    font-size: 1.2rem;
+header nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    margin: 10px 0 0 0;
 }
 
-.content {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+header nav ul li {
+    margin: 0 15px;
 }
 
-.content h2 {
-    font-size: 1.8rem;
-    color: #4682b4;
-    margin-bottom: 15px;
-}
-
-.section {
-    margin-bottom: 30px;
-}
-
-.section p,
-.section ul {
-    text-align: left;
-    font-size: 1rem;
-    margin: 10px 0;
-}
-
-.section ul {
-    list-style: disc;
-    margin-left: 20px;
-}
-
-footer {
-    margin-top: 30px;
-    padding: 10px;
-    background-color: #87cefa;
+header nav ul li a {
     color: white;
-    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Seções */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    text-align: center;
+    color: #660000;
+    margin-bottom: 20px;
+}
+
+/* Projetos */
+.project {
+    display: inline-block;
+    width: calc(33.333% - 20px);
+    margin: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project img {
+    max-width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.project h3 {
+    margin: 10px 0;
+    color: #660000;
+}
+
+.project p {
+    padding: 0 10px;
+}
+
+/* Rodapé */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Botão Voltar ao Topo */
+button {
     font-size: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff4d4d;
 }
