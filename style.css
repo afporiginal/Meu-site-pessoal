@@ -1,125 +1,97 @@
-/* style.css */
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* Configurações Gerais */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
-    line-height: 1.6;
-    transition: opacity 1s ease;
-}
-
-/* Header */
-header {
-    background: #660000;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-header h1 {
     margin: 0;
-    font-size: 2.5rem;
 }
 
-header nav ul {
+header {
+    background-color: #660000;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+nav {
     display: flex;
-    justify-content: center;
-    padding: 0;
-    list-style: none;
-    margin: 10px 0 0 0;
-}
-
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #ffd700;
-}
-
-/* Seções */
-section {
-    padding: 20px;
-    margin: 20px auto;
+    justify-content: space-between;
+    align-items: center;
     max-width: 1200px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
-section h2 {
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffcccc;
+}
+
+#hero {
+    background-color: #660000;
+    color: #fff;
     text-align: center;
+    padding: 2rem 1rem;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#about, #projects, #contact {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
     color: #660000;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
-/* Projetos */
 .project {
-    display: inline-block;
-    width: calc(33.333% - 20px);
-    margin: 10px;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    text-align: center;
-    transition: transform 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.project img {
-    max-width: 100%;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    margin-bottom: 1.5rem;
 }
 
 .project h3 {
-    margin: 10px 0;
-    color: #660000;
+    color: #333;
+    margin-bottom: 0.5rem;
 }
 
 .project p {
-    padding: 0 10px;
+    color: #555;
 }
 
-/* Rodapé */
 footer {
-    background: #333;
-    color: white;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
-}
-
-/* Botão Voltar ao Topo */
-button {
-    font-size: 1rem;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #ff4d4d;
+    padding: 1rem 0;
+    background-color: #660000;
+    color: #fff;
+    margin-top: 2rem;
 }
