@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
@@ -42,11 +42,15 @@ nav {
 .nav-links a {
     color: #fff;
     text-decoration: none;
-    transition: color 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: #660000;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #ffcccc;
+    background-color: #ffcccc;
+    color: #660000;
 }
 
 #hero {
@@ -61,7 +65,7 @@ nav {
     margin-bottom: 1rem;
 }
 
-#about, #projects, #contact {
+#about, #tech-arsenal, #contact {
     max-width: 800px;
     margin: 2rem auto;
     padding: 1rem;
@@ -75,17 +79,23 @@ h2 {
     margin-bottom: 1rem;
 }
 
-.project {
-    margin-bottom: 1.5rem;
+ul {
+    list-style: none;
 }
 
-.project h3 {
-    color: #333;
+ul li {
     margin-bottom: 0.5rem;
 }
 
-.project p {
-    color: #555;
+table {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+table img {
+    margin: 5px;
+    max-height: 40px;
 }
 
 footer {
