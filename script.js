@@ -1,74 +1,42 @@
-// script.js
-
-// Adicionar animação ao rolar para seções
-const navLinks = document.querySelectorAll('nav ul li a');
-
-navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
+// Função para rolar suavemente para uma seção quando o link de navegação é clicado
+document.querySelectorAll('.nav-links a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
         e.preventDefault();
-        const targetId = link.getAttribute('href').substring(1);
+        
+        // Pega o destino da ancoragem
+        const targetId = this.getAttribute('href').substring(1);
         const targetSection = document.getElementById(targetId);
+        
+        // Realiza a rolagem suave até a seção desejada
+        targetSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    });
+});
 
-        if (targetSection) {
-            window.scrollTo({
-                top: targetSection.offsetTop,
-                behavior: 'smooth'
-            });
+// Realce de navegação baseado na seção visível
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const links = document.querySelectorAll('.nav-links a');
+
+    let currentSection = '';
+    
+    // Verifica qual seção está visível na tela
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (window.scrollY >= sectionTop - sectionHeight / 3) {
+            currentSection = section.getAttribute('id');
         }
     });
-});
 
-// Exemplo de animação ao passar o mouse em projetos
-const projects = document.querySelectorAll('.project');
-
-projects.forEach(project => {
-    project.addEventListener('mouseenter', () => {
-        project.style.transform = 'scale(1.05)';
-        project.style.transition = 'transform 0.3s ease';
+    // Atualiza a classe ativa no menu de navegação
+    links.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === currentSection) {
+            link.classList.add('active');
+        }
     });
-
-    project.addEventListener('mouseleave', () => {
-        project.style.transform = 'scale(1)';
-    });
-});
-
-// Botão Voltar ao Topo
-const backToTopButton = document.createElement('button');
-backToTopButton.textContent = '⬆';
-backToTopButton.style.position = 'fixed';
-backToTopButton.style.bottom = '20px';
-backToTopButton.style.right = '20px';
-backToTopButton.style.padding = '10px';
-backToTopButton.style.background = '#660000';
-backToTopButton.style.color = 'white';
-backToTopButton.style.border = 'none';
-backToTopButton.style.borderRadius = '5px';
-backToTopButton.style.cursor = 'pointer';
-backToTopButton.style.display = 'none';
-backToTopButton.style.zIndex = '1000';
-
-document.body.appendChild(backToTopButton);
-
-backToTopButton.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        backToTopButton.style.display = 'block';
-    } else {
-        backToTopButton.style.display = 'none';
-    }
-});
-
-// Animação ao carregar a página
-window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 1s';
-    setTimeout(() => {
-        document.body.style.opacity = '1';
-    }, 100);
 });
